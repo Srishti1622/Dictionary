@@ -4,11 +4,8 @@ import requests
 
 # Create your views here.
 def homePage(request):
-    return render(request,'dict/home.html',{})
 
-
-def searchPage(request):
-
+    
     if request.method=='POST':
         keyword=request.POST.get('keyword')
         print(keyword)
@@ -54,4 +51,7 @@ def searchPage(request):
 
         print(results,main_synonym_list,main_antonym_list)
 
-    return render(request,'dict/home.html',{'results':results})
+        return render(request,'dict/home.html',{'results':results})
+
+    return render(request,'dict/home.html',{})
+
