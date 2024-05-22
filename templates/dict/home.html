@@ -13,7 +13,7 @@
     <h1 class="text-center p-3">Search and Learn</h1>
     <div class="card mx-auto" style="width: 900px; height: auto;">
         <div class="card-body">
-          <form class="d-flex" role="search" action="/" method="POST">
+          <form class="d-flex" role="search" action="search/" method="POST">
             {% csrf_token %}
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
             <button class="btn btn-primary" type="submit">Find</button>
@@ -21,6 +21,7 @@
         </div>
       </div>
 
+      {{results}}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

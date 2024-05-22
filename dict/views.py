@@ -53,3 +53,5 @@ def searchPage(request):
         }
 
         print(results,main_synonym_list,main_antonym_list)
+
+    return render(request,'dict/home.html',{'results':results})
